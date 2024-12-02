@@ -1,0 +1,6 @@
+services:
+  my_service:  # Nom du service
+    build: ./image  # Spécifie le chemin vers le répertoire contenant le Dockerfile
+    volumes:
+      - ./msg.txt:/opt/msg.txt  # Monte le fichier msg.txt dans le conteneur
+    command: ["/bin/cat", "/opt/msg.txt"]  # Commande à exécuter
